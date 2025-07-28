@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    input { width: 50px; margin: 5px; padding: 5px; font-size: 16px; }
+    button { padding: 10px 20px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <input type="number" id="num1"> +
+  <input type="number" id="num2">
+  <br><br>
+  <button onclick="add()">Add</button>
+  <h2 id="result"></h2>
+
+  <script>
+    function add() {
+      var a = parseFloat(document.getElementById('num1').value);
+      var b = parseFloat(document.getElementById('num2').value);
+      document.getElementById('result').innerText = "Result: " + (a + b);
+    }
+  </script>
+</body>
+</html>
+
